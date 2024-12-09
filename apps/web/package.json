@@ -2,12 +2,12 @@
   "name": "web",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite --clearScreen false",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint \"src/**/*.ts\""
+    "lint": "eslint \"src/**/*.ts\"",
+    "test": "npx tsx ./scripts/test.ts"
   },
   "dependencies": {
     "@repo/ui": "*"
@@ -15,6 +15,7 @@
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "@types/node": "^22.10.1",
     "eslint": "^8.57.0",
     "typescript": "5.5.4",
     "vite": "^5.1.4"
