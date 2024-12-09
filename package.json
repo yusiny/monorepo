@@ -3,6 +3,8 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "web:dev": "turbo dev --filter=web",
+    "docs:dev": "turbo dev --filter=docs",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
@@ -11,6 +13,10 @@
     "prettier": "^3.2.5",
     "turbo": "^2.3.3"
   },
-  "packageManager": "pnpm@8.15.6",
-  "name": "with-vite"
+  "name": "with-vite",
+  "packageManager": "yarn@1.22.22",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }
